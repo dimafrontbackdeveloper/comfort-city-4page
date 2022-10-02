@@ -1,0 +1,125 @@
+@import './mixins';
+@import './variables';
+
+body {
+    display: block;
+   font-family: 'SF Pro Rounded', sans-serif;
+   font-style: normal;
+   font-weight: 400;
+   @include adaptiv-value('font-size',24,12,0);
+   @include adaptiv-value('line-height',29,17,0);
+}
+
+.d-f {
+   display: flex;
+}
+
+.d-g {
+   display: grid;
+}
+
+.jc-sb {
+   justify-content: space-between;
+}
+
+.jc-c {
+   justify-content: center;
+}
+
+.ai-c {
+   align-items: center;
+}
+
+.fd-c {
+   flex-direction: column;
+}
+
+.fw-w {
+   flex-wrap: wrap;
+}
+
+
+.ta-c {
+   text-align: center;
+}
+
+.ta-e {
+   text-align: end;
+}
+
+.gtc-2 {
+   grid-template-columns: repeat(2, 1fr);
+
+   @include breakpoint(768px) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.gtc-3 {
+   grid-template-columns: repeat(3, 1fr);
+
+   @include breakpoint(1024px) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.gtc-4 {
+   grid-template-columns: repeat(4, 1fr);
+
+   @include breakpoint(768px) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @include breakpoint(425px) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.title {
+   display: inline-block;
+   position: relative;
+   font-family: 'SF Pro Rounded';
+   font-style: normal;
+   font-weight: 700;
+   @include adaptiv-value('font-size',48,20,0);
+   @include adaptiv-value('line-height',57,29,0);
+
+
+
+   span {
+   @include adaptiv-value('padding-right',10,5,0);
+   @include adaptiv-value('padding-left',10,5,0);
+      color: inherit;
+   }
+
+   // .title__line
+
+   &__line {
+      position: absolute;
+      width: 100%;
+      height: 30%;
+      bottom: 0;
+      left: 0;
+      transform: translateY(-50%);
+      background: $primary;
+      z-index: -1;
+
+   }
+}
+
+.op05{
+   opacity: 0.5;
+}
+
+.color-000{
+   color: #000000;
+}
+
+.disabled{
+   pointer-events:none;
+   cursor: not-allowed;
+}
+
+.w70{
+   width: 70% !important;
+}

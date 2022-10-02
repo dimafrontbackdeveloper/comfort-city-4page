@@ -1,0 +1,131 @@
+body {
+    display: block;
+    font-family: "SF Pro Rounded", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(12px + 12 * ((100vw - 320px) / 1600));
+    line-height: calc(17px + 12 * ((100vw - 320px) / 1600));
+}
+
+.d-f {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.d-g {
+    display: grid;
+}
+
+.jc-sb {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.jc-c {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.ai-c {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.fd-c {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.fw-w {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-e {
+    text-align: end;
+}
+
+.gtc-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gtc-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 1024px) {
+    .gtc-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gtc-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .gtc-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.title {
+    display: inline-block;
+    position: relative;
+    font-family: "SF Pro Rounded";
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(20px + 28 * ((100vw - 320px) / 1600));
+    line-height: calc(29px + 28 * ((100vw - 320px) / 1600));
+}
+
+.title span {
+    padding-right: calc(5px + 5 * ((100vw - 320px) / 1600));
+    padding-left: calc(5px + 5 * ((100vw - 320px) / 1600));
+    color: inherit;
+}
+
+.title__line {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background: #FFC11E;
+    z-index: -1;
+}
+
+.op05 {
+    opacity: 0.5;
+}
+
+.color-000 {
+    color: #000000;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.w70 {
+    width: 70% !important;
+}
